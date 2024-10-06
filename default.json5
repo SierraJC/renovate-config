@@ -1,0 +1,16 @@
+{
+  "description": "SierraJC default preset",
+  "extends": [
+    "config:recommended",
+    // config:best-practices
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":pinDevDependencies",
+    ":configMigration",
+    // Custom
+    "schedule:earlyMondays",
+    ":semanticCommits",
+    ":enableVulnerabilityAlerts",
+  ],
+  "timezone": "Australia/Melbourne",
+}
