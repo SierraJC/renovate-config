@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "SierraJC default preset",
   "extends": [
     "config:recommended",
@@ -7,8 +8,15 @@
     ":pinDevDependencies",
     ":configMigration",
     "schedule:earlyMondays",
+    "mergeConfidence:all-badges",
+    "npm:unpublishSafe",
     ":semanticCommits",
-    ":enableVulnerabilityAlerts"
+    ":enableVulnerabilityAlerts",
+    ":labels(dependencies)"
   ],
-  "timezone": "Australia/Melbourne"
+  "timezone": "Australia/Melbourne",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }
