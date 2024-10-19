@@ -7,14 +7,14 @@
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies",
     ":configMigration",
-    "schedule:earlyMondays",
+    ":timezone(Australia/Melbourne)",
+    "schedule:weekends",
     "mergeConfidence:all-badges",
     "npm:unpublishSafe",
     ":semanticCommits",
-    ":enableVulnerabilityAlerts",
+    ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies)"
   ],
-  "timezone": "Australia/Melbourne",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
