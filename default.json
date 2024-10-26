@@ -15,11 +15,11 @@
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies)"
   ],
+  "onboardingConfigFileName": ".github/renovate.json5",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
   },
-  "onboardingConfigFileName": ".github/renovate.json5",
   "packageRules": [
     {
       "description": "Group github actions",
@@ -41,6 +41,20 @@
       ],
       "matchDepTypes": [
         "devDependencies"
+      ]
+    },
+    {
+      "description": "Group @types dependencies",
+      "groupName": "@types/*",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackagePatterns": [
+        "^@types/"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
       ]
     }
   ]
