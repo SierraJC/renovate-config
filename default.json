@@ -19,5 +19,28 @@
     "enabled": true,
     "automerge": true
   },
-  "onboardingConfigFileName": ".github/renovate.json5"
+  "onboardingConfigFileName": ".github/renovate.json5",
+  "packageRules": [
+    {
+      "description": "Group github actions",
+      "groupName": "github actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "description": "Group dev dependencies",
+      "groupName": "dev dependencies",
+      "matchManagers": [
+        "npm"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ]
+    }
+  ]
 }
