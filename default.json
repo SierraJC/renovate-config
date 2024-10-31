@@ -20,6 +20,10 @@
     "enabled": true,
     "automerge": true
   },
+  "postUpdateOptions": [
+    "gomodTidy",
+    "gomodUpdateImportPaths"
+  ],
   "packageRules": [
     {
       "description": "Group github actions",
