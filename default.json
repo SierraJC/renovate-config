@@ -13,7 +13,9 @@
     "npm:unpublishSafe",
     ":semanticCommits",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(dependencies)"
+    ":labels(dependencies)",
+    "helpers:disableTypesNodeMajor",
+    "workarounds:typesNodeVersioning"
   ],
   "onboardingConfigFileName": ".github/renovate.json5",
   "onboardingRebaseCheckbox": true,
