@@ -12,13 +12,18 @@
     "mergeConfidence:all-badges",
     "npm:unpublishSafe",
     ":semanticCommits",
-    ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies)",
     "helpers:disableTypesNodeMajor",
     "workarounds:typesNodeVersioning"
   ],
   "onboardingConfigFileName": ".github/renovate.json5",
   "onboardingRebaseCheckbox": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+  },
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
+  "osvVulnerabilityAlerts": true,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
